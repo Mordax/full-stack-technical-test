@@ -120,7 +120,8 @@ See [full-stack-tech-test-backend](https://github.com/HultTechnology/full-stack-
 #### ⚡ My Approach
 
 **Technology Choices:**
-<!-- List your tech stack and why you chose it -->
+Since React is required, I decided to go with Next.js since I have more recent experience with it, as well as leverage 
+shadcnui for ease of mobile responsiveness. 
 
 **AI Tool Usage:**
 <!-- Document how you used AI tools and what they helped with -->
@@ -130,17 +131,19 @@ See [full-stack-tech-test-backend](https://github.com/HultTechnology/full-stack-
 
 **Key Design Decisions:**
 <!-- Explain any important architectural or UX decisions -->
+Initially I didn't find the api key till I looked back in the emails so I began with mocked data and mocked apis and ported it away. Then I found it and tried to modify 
+what I've done for it.
 
 #### 🚀 Getting Started
 <!-- Add setup instructions for running locally -->
 ```bash
-# Installation
-npm install
+# Installation (make sure you're on latest node version
+pnpm install
 
 # Development
-npm run dev
+pnpm run dev
 
 # Build
-npm run build
+pnpm run build
 ```
 
