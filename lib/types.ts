@@ -25,7 +25,7 @@ export interface Pricing {
 }
 
 export interface Location {
-  type: "in-person" | "online" | "hybrid"
+  type: "in-person" | "online" | "hybrid" | "physical"
   address: string
 }
 
