@@ -9,16 +9,32 @@ import { RegistrationForm } from "@/components/registration-form"
 
 async function getEvent(id: string): Promise<Event | null> {
   try {
-    // Use absolute URL for server-side fetching in production
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL ||
-                    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
-
-    const response = await fetch(`${baseUrl}/api/events/${id}`, {
+    // Call external API directly from server component
+    const response = await fetch(`https://x15zoj9on9.execute-api.us-east-1.amazonaws.com/prod/events/${id}`, {
+      headers: {
+        "accept": "application/json",
+        "x-api-key": process.env.API_KEY!,
+      },
       cache: "no-store",
     })
+
     if (!response.ok) return null
-    return response.json()
+
+    const data = await response.json()
+    const event = data.event
+
+    if (!event) return null
+
+    // Normalize location type: convert "physical" to "in-person" for UI consistency
+    return {
+      ...event,
+      location: {
+        ...event.location,
+        type: event.location.type === "physical" ? "in-person" : event.location.type
+      }
+    }
   } catch (error) {
+    console.error("Error fetching event:", error)
     return null
   }
 }
