@@ -9,7 +9,11 @@ import { RegistrationForm } from "@/components/registration-form"
 
 async function getEvent(id: string): Promise<Event | null> {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/api/events/${id}`, {
+    // Use absolute URL for server-side fetching in production
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL ||
+                    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+
+    const response = await fetch(`${baseUrl}/api/events/${id}`, {
       cache: "no-store",
     })
     if (!response.ok) return null
