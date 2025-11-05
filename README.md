@@ -121,7 +121,7 @@ See [full-stack-tech-test-backend](https://github.com/HultTechnology/full-stack-
 
 **Technology Choices:**
 Since React is required, I decided to go with Next.js since I have more recent experience with it, as well as leverage 
-shadcnui for ease of mobile responsiveness. 
+shadcnui for ease of mobile responsiveness. Currently debugging deployment. 
 
 **AI Tool Usage:**
 <!-- Document how you used AI tools and what they helped with -->
