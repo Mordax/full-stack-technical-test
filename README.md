@@ -115,7 +115,7 @@ See [full-stack-tech-test-backend](https://github.com/HultTechnology/full-stack-
 
 #### 🔗 Deployed URL
 <!-- Add your deployed URL here -->
-**Live Demo:** [Your deployed URL here]
+**Live Demo:** https://full-stack-technical-test-eight.vercel.app/
 
 #### ⚡ My Approach
 
@@ -125,9 +125,16 @@ shadcnui for ease of mobile responsiveness. Currently debugging deployment.
 
 **AI Tool Usage:**
 <!-- Document how you used AI tools and what they helped with -->
+Using my own experience of rapid ai prototyping, I knew the approach I needed to build out scaffolding quickly using Next.js friendly
+models, leveraging a bit of V0 and also inspiration from the events website lu.ma. Initially I couldn't find the api key fast enough so I mocked
+the data as close to the swagger as possible as a backup. Then ported it to using the API properly. Wherever I didn't code, I used claude code and then
+guided it with a better approach and checked functionality wherever I could. 
 
 **Bonus Feature (if implemented):**
 <!-- Which bonus feature you chose and how you implemented it -->
+I implemented the second one "Event capacity and waitlists". I didn't have enough
+time to fully implement a waitlist function but the capacity status and max capacity are there.
+
 
 **Key Design Decisions:**
 <!-- Explain any important architectural or UX decisions -->
