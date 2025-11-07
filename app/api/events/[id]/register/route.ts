@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-const API_BASE_URL = "https://x15zoj9on9.execute-api.us-east-1.amazonaws.com/prod/events"
+const API_BASE_URL = "https://cw67o3d8j7.execute-api.eu-north-1.amazonaws.com/prod/events"
 const API_KEY = process.env.API_KEY!
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
