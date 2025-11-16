@@ -15,7 +15,7 @@ async function getEvent(id: string): Promise<Event | null> {
         "accept": "application/json",
         "x-api-key": process.env.API_KEY!,
       },
-      cache: "no-store",
+      next: { revalidate: 60 }, // Cache for 60 seconds
     })
 
     if (!response.ok) return null
