@@ -38,7 +38,7 @@ export function EventFilters({
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">All Categories</SelectItem>
-          <SelectItem value="tech">Technology</SelectItem>
+          <SelectItem value="technology">Technology</SelectItem>
           <SelectItem value="workshop">Workshop</SelectItem>
           <SelectItem value="design">Design</SelectItem>
           <SelectItem value="networking">Networking</SelectItem>

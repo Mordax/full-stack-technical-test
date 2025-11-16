@@ -10,7 +10,7 @@ import { RegistrationForm } from "@/components/registration-form"
 async function getEvent(id: string): Promise<Event | null> {
   try {
     // Call external API directly from server component
-    const response = await fetch(`https://x15zoj9on9.execute-api.us-east-1.amazonaws.com/prod/events/${id}`, {
+    const response = await fetch(`https://cw67o3d8j7.execute-api.eu-north-1.amazonaws.com/prod/events/${id}`, {
       headers: {
         "accept": "application/json",
         "x-api-key": process.env.API_KEY!,
